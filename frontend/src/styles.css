@@ -1,0 +1,16 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --red: rgb(255, 0, 0);
+    --blue: rgb(10, 59, 183);
+    --yellow: rgb(255, 255, 0);
+    --green: rgb(0, 255, 0);
+    --orange: rgb(255, 100, 0);
+    --purple: rgb(200, 0, 255);
+    --gray: rgb(70, 70, 70);
+    --brown: rgb(60, 45, 35);
+    --back: #F5F7FA;
+}
