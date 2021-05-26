@@ -1,0 +1,18 @@
+.box {
+    width: 544px;
+    height: 480px;
+
+    left:50%;
+    top:50%; 
+    margin-left:-298px; /* Metade do valor da Largura */
+    margin-top:-270px; /* Metade da valor da Altura */
+    position:absolute;
+    
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px 2px rgba(112, 122, 138, 40%);
+}
+
+.paging {
+    margin-left: 23px;
+}

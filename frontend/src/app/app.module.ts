@@ -10,12 +10,18 @@ import { MatCardModule } from '@angular/material/card'
 import { MatButtonModule } from '@angular/material/button'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { ConfirmEmailComponent } from './views/confirm-email/confirm-email.component';
+import { TermsConditionsComponent } from './views/terms-conditions/terms-conditions.component';
+import { InviteFriendsComponent } from './views/invite-friends/invite-friends.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ConfirmEmailComponent,
+    TermsConditionsComponent,
+    InviteFriendsComponent
   ],
   imports: [
     BrowserModule,

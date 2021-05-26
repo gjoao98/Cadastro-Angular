@@ -14,3 +14,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --brown: rgb(60, 45, 35);
     --back: #F5F7FA;
 }
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--back);
+}
