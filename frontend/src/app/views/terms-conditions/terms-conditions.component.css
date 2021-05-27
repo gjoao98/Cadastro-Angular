@@ -14,13 +14,14 @@
 }
 
 .paging {
-    margin: 15px 0 0 23px;
+    margin: 10px 0 0 23px;
 }
 
 h2 {
     margin-left: 23px;
 }
 
+/*
 .terms {
     width: 544px;
     height: 306px;
@@ -32,25 +33,55 @@ h2 {
     overflow: hidden;
     overflow-y: scroll;
 }
+*/
 
-/* largura */
-.terms::-webkit-scrollbar {
+.terms {
+    position: relative;
+}
+
+.terms::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 515px;
+    height: 30px;
+    background: linear-gradient(white, rgba(255, 255, 255, 0.001));
+}
+
+.terms::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 515px;
+    height: 40px;
+    background: linear-gradient(rgba(255, 255, 255, 0.001), white);
+}
+
+.scroller {
+    max-width: 90%;
+    max-height: 306px;
+    width: 544px;
+    height: 306px;
+
+    overflow-y: scroll;
+    margin: -15px 0 5px 23px;
+    padding: 15px 5px 15px 0px;
+
+    background: white;
+}
+
+.scroller::-webkit-scrollbar {
     width: 4px;
 }
   
-/* fundo */
-.terms::-webkit-scrollbar-track {
-background: #EBEFF5;
+
+.scroller::-webkit-scrollbar-track {
+    background: #EBEFF5;
 }
 
-/* scroll */
-.terms::-webkit-scrollbar-thumb {
-background: #C8D1E0;
-}
 
-/* scroll on hover */
-.terms::-webkit-scrollbar-thumb:hover {
-background: #C8D1E0;
+.scroller::-webkit-scrollbar-thumb {
+    background: #C8D1E0;
 }
 
 .buttons {
