@@ -14,5 +14,66 @@
 }
 
 .paging {
+    margin: 15px 0 0 23px;
+}
+
+h2 {
     margin-left: 23px;
+}
+
+.terms {
+    width: 544px;
+    height: 306px;
+    margin-left: 23px;
+    padding-right: 5px;
+
+    max-width: 90%;
+    max-height: 306px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* largura */
+.terms::-webkit-scrollbar {
+    width: 4px;
+}
+  
+/* fundo */
+.terms::-webkit-scrollbar-track {
+background: #EBEFF5;
+}
+
+/* scroll */
+.terms::-webkit-scrollbar-thumb {
+background: #C8D1E0;
+}
+
+/* scroll on hover */
+.terms::-webkit-scrollbar-thumb:hover {
+background: #C8D1E0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.submit {
+    width: 81px;
+    height: 35px;
+    border-radius: 4px;
+    margin: 24px 25px 0 auto;
+    
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.decline {
+    width: 85px;
+    height: 35px;
+    border-radius: 4px;
+    margin: 24px -330px 0 auto;
+
+    color: #B20909;
 }

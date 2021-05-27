@@ -17,3 +17,54 @@
     margin-top: 10px;
     margin-left: 23px;
 }
+
+h2 {
+    margin: -10px 0px 5px 23px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 23px;
+}
+
+input {
+    border: 1px solid #C8D1E0;
+    width: 320px;
+    height: 46px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.send {
+    width: 122px;
+    height: 36px;
+    border-radius: 4px;
+    margin: 20px 15px 0 auto;
+
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.skip {
+    width: 59px;
+    height: 36px;
+    border-radius: 4px;
+    margin: 20px -80px 0 auto;
+
+    color: var(--blue);
+}
+
+.add {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    margin: 20px -80px 0 auto;
+
+    color: var(--blue);
+}
