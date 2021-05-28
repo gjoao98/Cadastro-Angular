@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './views/home/home.component';
+import { CreateAccountComponent } from './views/create-account/create-account.component';
 import { ConfirmEmailComponent } from './views/confirm-email/confirm-email.component';
 import { TermsConditionsComponent } from './views/terms-conditions/terms-conditions.component';
 import { InviteFriendsComponent } from './views/invite-friends/invite-friends.component'
@@ -17,10 +18,11 @@ import { MatIconModule } from '@angular/material/icon'
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    CreateAccountComponent,
     ConfirmEmailComponent,
     TermsConditionsComponent,
     InviteFriendsComponent
@@ -35,7 +37,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatInputModule,
     FormsModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

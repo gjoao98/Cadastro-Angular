@@ -3,16 +3,16 @@
     <h2>Create your account</h2>
     <form class="formulario">
         <mat-label for="Name">Name</mat-label>
-        <input type="text">
+        <input matInput [(ngModel)]="account.name" name="name" />
 
         <mat-label for="Email">Email</mat-label>
-        <input type="text">
+        <input matInput [(ngModel)]="account.email" name="email" />
 
         <mat-label for="Password">Password</mat-label>
-        <input type="text">
+        <input matInput [(ngModel)]="account.password" name="password" />
     </form>
 
-    <button mat-raised-button type="submit">
+    <button mat-raised-button type="submit" (click)="createAccount()">
         Create account
     </button>
 </mat-card>
