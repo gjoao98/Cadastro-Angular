@@ -4,7 +4,7 @@
 
     left:50%;
     top:50%;  
-    margin-left:-216px; /* Metade do valor da Largura */
+    margin-left:-192px; /* Metade do valor da Largura */
     margin-top:-270px; /* Metade da valor da Altura */
     position:absolute;
     
@@ -14,18 +14,24 @@
 }
 
 .paging {
-    margin-top: 10px;
-    margin-left: 23px;
+    margin: 20px 0 0 23px;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #58606E;
 }
 
 h2 {
-    margin: -10px 0px 5px 23px;
+    margin-left: 23px;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 500; 
+    font-size: 1.5rem;
 }
 
 .formulario {
     display: flex;
     flex-direction: column;
-    margin: 10px 0 0 23px;
+    margin: -5px 0 0 23px;
 }
 
 input {
@@ -36,6 +42,10 @@ input {
     margin-bottom: 15px;
 }
 
+label {
+    margin-bottom: 5px;
+}
+
 .buttons {
     display: flex;
     flex-direction: row;
@@ -44,27 +54,50 @@ input {
 .send {
     width: 122px;
     height: 36px;
+    border: 1px solid #C8D1E0;
     border-radius: 4px;
-    margin: 20px 15px 0 auto;
+    margin: 7px 30px 0 auto;
+
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
 
     background-color: var(--blue);
     color: var(--white);
+
+    cursor: pointer;
 }
 
 .skip {
     width: 59px;
     height: 36px;
+    border: 1px solid #C8D1E0;
     border-radius: 4px;
-    margin: 20px -80px 0 auto;
+    margin: 7px -100px 0 auto;
 
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    background-color: var(--white);
     color: var(--blue);
+
+    cursor: pointer;
 }
 
 .add {
     width: 36px;
     height: 36px;
+    border: 1px solid #C8D1E0;
     border-radius: 4px;
-    margin: 20px -80px 0 auto;
+    margin: 7px -100px 0 auto;
 
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    background-color: var(--white);
     color: var(--blue);
+
+    cursor: pointer;
 }

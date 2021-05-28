@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Account } from '../components/create-account.model'
 import { CreateAccountService } from '../components/create-account.service';
@@ -10,11 +11,13 @@ import { CreateAccountService } from '../components/create-account.service';
 })
 export class CreateAccountComponent implements OnInit {
 
-  account: Account = {
-    name: '',
-    email: '',
-    password: ''
-  }
+  public createForm: FormGroup = new FormGroup(
+    {
+      name: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(8)])
+    }
+  );
 
   constructor(
     private createAccountService: CreateAccountService,
@@ -25,9 +28,20 @@ export class CreateAccountComponent implements OnInit {
 
   }
 
-  createAccount(): void {
-    this.createAccountService.create(this.account).subscribe(() => {
-      this.createAccountService.showMessage('Your account was created!')
+  onSubmit(event: Event): void {
+    event.preventDefault();
+
+    if (this.createForm.invalid) {
+      return;
+    }
+
+    const account = {
+      name: this.createForm.get('name')!.value,
+      email: this.createForm.get('email')!.value,
+      password: this.createForm.get('password')!.value
+    };
+
+    this.createAccountService.create(account).subscribe(() => {
       this.router.navigate(['/confirm'])
     })
   }

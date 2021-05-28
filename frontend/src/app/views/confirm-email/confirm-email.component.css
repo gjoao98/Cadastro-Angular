@@ -4,7 +4,7 @@
 
     left:50%;
     top:50%; 
-    margin-left:-216px; /* Metade do valor da Largura */
+    margin-left:-192px; /* Metade do valor da Largura */
     margin-top:-270px; /* Metade da valor da Altura */
     position:absolute;
     
@@ -14,16 +14,30 @@
 }
 
 .paging { 
-    margin-top: 15px;
+    margin: 20px 0 0 23px;
+    font-family: 'Gotham Pro', sans-serif;
 }
 
 h2 {
-    margin-left: 23px;
+    margin: 0 0 5px 23px;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 500;
 }
 
 p {
-    padding-top: -5px;
     margin-left: 23px;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #58606E;
+}
+
+span {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: #0A3BB7;
 }
 
 .codeLine {
@@ -47,22 +61,40 @@ input {
     flex-direction: row;
 }
 
-
 .submit {
     width: 89px;
     height: 36px;
+    border: 1px solid #C8D1E0;
     border-radius: 4px;
     margin: 20px 15px 0 auto;
 
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+
     background-color: var(--blue);
-    color: var(--white);    
+    color: var(--white); 
+    
+    cursor: pointer;
+}
+
+.submit:disabled {
+    background-color: #C8D1E0;
 }
 
 .resend {
     width: 128px;
     height: 36px;
+    border: 1px solid #C8D1E0;
     border-radius: 4px;
     margin: 20px -125px 0 auto;
 
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+
+    background-color: var(--white);
     color: var(--blue); 
+
+    cursor: pointer;
 }

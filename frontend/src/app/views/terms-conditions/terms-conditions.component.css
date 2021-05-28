@@ -4,7 +4,7 @@
 
     left:50%;
     top:50%; 
-    margin-left:-298px; /* Metade do valor da Largura */
+    margin-left:-272px; /* Metade do valor da Largura */
     margin-top:-270px; /* Metade da valor da Altura */
     position:absolute;
     
@@ -14,36 +14,32 @@
 }
 
 .paging {
-    margin: 10px 0 0 23px;
+    margin: 20px 0 0 23px;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #58606E;
 }
 
 h2 {
     margin-left: 23px;
+    font-family: Gotham Pro;
+    font-weight: 500; 
+    font-size: 1.5rem;
 }
-
-/*
-.terms {
-    width: 544px;
-    height: 306px;
-    margin-left: 23px;
-    padding-right: 5px;
-
-    max-width: 90%;
-    max-height: 306px;
-    overflow: hidden;
-    overflow-y: scroll;
-}
-*/
 
 .terms {
     position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75rem;
+    color: #58606E;
 }
 
 .terms::before {
     content: '';
     position: absolute;
     top: 0;
-    width: 515px;
+    width: 513px;
     height: 30px;
     background: linear-gradient(white, rgba(255, 255, 255, 0.001));
 }
@@ -52,7 +48,7 @@ h2 {
     content: '';
     position: absolute;
     bottom: 0;
-    width: 515px;
+    width: 513px;
     height: 40px;
     background: linear-gradient(rgba(255, 255, 255, 0.001), white);
 }
@@ -64,8 +60,8 @@ h2 {
     height: 306px;
 
     overflow-y: scroll;
-    margin: -15px 0 5px 23px;
-    padding: 15px 5px 15px 0px;
+    margin: -20px 0 5px 23px;
+    padding: 15px 5px 0px 0px;
 
     background: white;
 }
@@ -93,18 +89,33 @@ h2 {
 .submit {
     width: 81px;
     height: 35px;
+    border: 1px solid #C8D1E0;
     border-radius: 4px;
     margin: 24px 25px 0 auto;
+
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
     
     color: var(--white);
     background-color: var(--blue);
+
+    cursor: pointer;
 }
 
 .decline {
     width: 85px;
     height: 35px;
+    border: 1px solid #C8D1E0;
     border-radius: 4px;
     margin: 24px -330px 0 auto;
 
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    background-color: var(--white);
     color: #B20909;
+
+    cursor: pointer;
 }
