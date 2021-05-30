@@ -1,20 +1,39 @@
 <div class="box">
-    <p class="paging">01 > 02 > 03 > 04</p>
+    <p class="paging">
+        <span>01</span> > 02 > 03 > 04
+    </p>
     <h2>Create your account</h2>
     <form class="formulario" [formGroup]="createForm" (submit)="onSubmit($event)">
         <label for="Name">Name</label>
         <input formControlName="name" name="name" />
+        <div *ngIf="createForm.get('name')!.hasError('required')">
+            <!--
+            <div class="error" id="name">
+                Name is Obrigatory
+            </div>
+            -->
+        </div>
 
         <label for="Email">Email</label>
         <input formControlName="email" name="email" />
         <div *ngIf="createForm.get('email')!.hasError('required')">
-
+            <!--
+            <div class=" error" id="email">
+                Invalid Email
+            </div>
+            -->
         </div>
 
         <label for="Password">Password</label>
         <input formControlName="password" name="password" />
-
-        <button type="submit">
+        <div *ngIf="createForm.get('password')!.hasError('required')">
+            <!--
+            <div class="error" id="password">
+                The Password must have 8 caracters!
+            </div>
+            -->
+        </div>
+        <button type="submit" [disabled]="!createForm.valid">
             Create account
         </button>
     </form>

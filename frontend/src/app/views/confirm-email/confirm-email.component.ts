@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-confirm-email',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfirmEmailComponent implements OnInit {
 
-  constructor() { }
+  confirmCode: FormGroup = new FormGroup({
+    n1: new FormControl('', [Validators.required]),
+    n2: new FormControl('', [Validators.required]),
+    n3: new FormControl('', [Validators.required]),
+    n4: new FormControl('', [Validators.required]),
+    n5: new FormControl('', [Validators.required]),
+    n6: new FormControl('', [Validators.required]),
+  })
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  onSubmit(event: Event): void {
+    event.preventDefault();
+
+    const code = {
+      n1: this.confirmCode.get('n1')!.value,
+      n2: this.confirmCode.get('n2')!.value,
+      n3: this.confirmCode.get('n3')!.value,
+      n4: this.confirmCode.get('n4')!.value,
+      n5: this.confirmCode.get('n5')!.value,
+      n6: this.confirmCode.get('n6')!.value,
+    }
+
+    this.router.navigate(['/terms'])
+  }
 }

@@ -18,7 +18,14 @@
     font-family: 'Gotham Pro', sans-serif;
     font-weight: 400;
     font-size: 0.75rem;
-    color: #58606E;
+    color: #707A8A;
+}
+
+span {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #333840;
 }
 
 h2 {

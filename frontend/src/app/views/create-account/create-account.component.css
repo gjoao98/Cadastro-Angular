@@ -1,5 +1,6 @@
 .box {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
 
@@ -20,8 +21,16 @@
 .paging {
     margin: 10px 0px 10px 23px;
     font-family: 'Gotham Pro', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 0.75rem;
+    color: #707A8A;
+}
+
+span {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #333840;
 }
 
 h2 {
@@ -73,3 +82,50 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    transition: .2s;
+    background-color: rgb(4, 4, 165);
+}
+
+button:disabled {
+    opacity: 30%;
+    cursor: no-drop;
+}
+
+.ng-invalid.ng-touched:not(form) {
+    border: 1px solid red;
+}
+
+/*
+.error {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+
+    width: 300px;
+    height: 50px;
+    
+    border: 1px solid var(--red);
+    color: var(--red);
+    background-color: var(--back);
+}
+
+#password {
+    margin: -419px 600px;
+    width: 350px;
+    height: 50px;
+}
+
+#email {
+    margin: -334px 600px;
+}
+
+#name {
+    margin: -250px 600px;
+}
+*/

@@ -1,5 +1,7 @@
 <div class="box">
-    <p class="paging">01 > 02 > 03 > 04</p>
+    <p class="paging">
+        01 > <span id="page">02</span> > 03 > 04
+    </p>
     <h2>Confirm your email</h2>
     <p>
         We sent a code to "gjoao98@gmail.com", please type it <br>
@@ -9,21 +11,21 @@
         </a>
     </p>
 
-    <div class="codeLine">
-        <input type="number" />
-        <input type="number" />
-        <input type="number" />
-        <input type="number" />
-        <input type="number" />
-        <input type="number" />
-    </div>
+    <form class="codeLine" [formGroup]="confirmCode" (submit)="onSubmit($event)">
+        <input type="number" formControlName="n1" name="n1" />
+        <input type="number" formControlName="n2" name="n2" />
+        <input type="number" formControlName="n3" name="n3" />
+        <input type="number" formControlName="n4" name="n4" />
+        <input type="number" formControlName="n5" name="n5" />
+        <input type="number" formControlName="n6" name="n6" />
+    </form>
 
     <div class="buttons">
         <button class="resend">
             Resend code
         </button>
 
-        <button class="submit" type="submit" disabled={false}>
+        <button class="submit" type="submit">
             Confirm
         </button>
     </div>

@@ -11,5 +11,4 @@ export class TermsConditionsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

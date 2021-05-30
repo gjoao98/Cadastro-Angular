@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Account } from '../components/create-account.model'
 import { CreateAccountService } from '../components/create-account.service';
 
 @Component({
@@ -11,7 +10,7 @@ import { CreateAccountService } from '../components/create-account.service';
 })
 export class CreateAccountComponent implements OnInit {
 
-  public createForm: FormGroup = new FormGroup(
+  createForm: FormGroup = new FormGroup(
     {
       name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -44,5 +43,19 @@ export class CreateAccountComponent implements OnInit {
     this.createAccountService.create(account).subscribe(() => {
       this.router.navigate(['/confirm'])
     })
+  }
+
+  verifyValidTouched(formControlName: FormControl) {
+
+    //this.createForm.get(formControlName)?.valid;
+
+    return !formControlName.valid && formControlName.touched;
+  }
+
+  applyError(formControlName: FormControl) {
+    return {
+      'has-error': this.verifyValidTouched(formControlName),
+      'has-feedback': this.verifyValidTouched(formControlName)
+    }
   }
 }

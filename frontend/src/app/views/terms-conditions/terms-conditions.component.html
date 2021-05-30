@@ -1,5 +1,7 @@
 <div class="box">
-    <p class="paging">01 > 02 > 03 > 04</p>
+    <p class="paging">
+        01 > 02 > <span>03</span> > 04
+    </p>
     <h2>Terms and conditions</h2>
     <div class="terms">
         <p class="scroller">
@@ -46,11 +48,11 @@
     </div>
 
     <div class="buttons">
-        <button class="decline">
+        <button class="decline" routerLink="">
             Decline
         </button>
 
-        <button class="submit" type="submit">
+        <button class="submit" type="submit" routerLink="/invite">
             Accept
         </button>
     </div>
