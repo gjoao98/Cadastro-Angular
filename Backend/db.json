@@ -8,15 +8,9 @@
     },
     {
       "name": "Gabriel",
-      "email": "Gjoao985@gmail.com",
-      "password": "12345678",
-      "id": 2
-    },
-    {
-      "name": "Gabriel",
       "email": "gjoao985@gmail.com",
       "password": "12345678",
-      "id": 3
+      "id": 2
     }
   ]
 }

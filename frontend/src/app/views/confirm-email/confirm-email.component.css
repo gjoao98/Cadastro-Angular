@@ -51,7 +51,7 @@ span {
 }
 
 .codeLine {
-    display: flex;
+    margin-left: 10px;
     flex-direction: row;
     justify-content: center;
 }
@@ -65,18 +65,26 @@ input {
     margin: 7px 0px 0px 7px;
 }
 
+.ng-invalid.ng-touched:not(form) {
+    border: 1px solid red;
+}
 
 .buttons {
     display: flex;
     flex-direction: row;
+    margin: 24px 0px 0px 0px;
 }
 
 .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px 0px auto;
+
     width: 89px;
     height: 36px;
     border: 1px solid #C8D1E0;
     border-radius: 4px;
-    margin: 20px 15px 0 auto;
 
     font-family: 'Gotham Pro', sans-serif;
     font-weight: 500;
@@ -88,16 +96,26 @@ input {
     cursor: pointer;
 }
 
+.submit:hover {
+    transition: .2s;
+    background-color: rgb(4, 4, 165);
+}
+
 .submit:disabled {
-    background-color: #C8D1E0;
+    opacity: 30%;
+    cursor: no-drop;
 }
 
 .resend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 0px 125px;
+
     width: 128px;
     height: 36px;
     border: 1px solid #C8D1E0;
     border-radius: 4px;
-    margin: 20px -125px 0 auto;
 
     font-family: 'Gotham Pro', sans-serif;
     font-weight: 500;

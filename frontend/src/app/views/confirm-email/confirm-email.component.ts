@@ -10,12 +10,12 @@ import { Router } from '@angular/router';
 export class ConfirmEmailComponent implements OnInit {
 
   confirmCode: FormGroup = new FormGroup({
-    n1: new FormControl('', [Validators.required]),
-    n2: new FormControl('', [Validators.required]),
-    n3: new FormControl('', [Validators.required]),
-    n4: new FormControl('', [Validators.required]),
-    n5: new FormControl('', [Validators.required]),
-    n6: new FormControl('', [Validators.required]),
+    n1: new FormControl('', [Validators.required, Validators.maxLength(1)]),
+    n2: new FormControl('', [Validators.required, Validators.maxLength(1)]),
+    n3: new FormControl('', [Validators.required, Validators.maxLength(1)]),
+    n4: new FormControl('', [Validators.required, Validators.maxLength(1)]),
+    n5: new FormControl('', [Validators.required, Validators.maxLength(1)]),
+    n6: new FormControl('', [Validators.required, Validators.maxLength(1)]),
   })
 
   constructor(
@@ -27,6 +27,10 @@ export class ConfirmEmailComponent implements OnInit {
 
   onSubmit(event: Event): void {
     event.preventDefault();
+
+    if (this.confirmCode.invalid) {
+      return;
+    }
 
     const code = {
       n1: this.confirmCode.get('n1')!.value,

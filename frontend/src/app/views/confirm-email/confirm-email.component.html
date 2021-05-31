@@ -18,15 +18,15 @@
         <input type="number" formControlName="n4" name="n4" />
         <input type="number" formControlName="n5" name="n5" />
         <input type="number" formControlName="n6" name="n6" />
+
+        <div class="buttons">
+            <button class="resend" type="button">
+                Resend code
+            </button>
+
+            <button class="submit" type="submit" [disabled]="!confirmCode.valid">
+                Confirm
+            </button>
+        </div>
     </form>
-
-    <div class="buttons">
-        <button class="resend">
-            Resend code
-        </button>
-
-        <button class="submit" type="submit">
-            Confirm
-        </button>
-    </div>
 </div>

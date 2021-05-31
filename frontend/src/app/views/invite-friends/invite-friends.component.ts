@@ -11,5 +11,4 @@ export class InviteFriendsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
