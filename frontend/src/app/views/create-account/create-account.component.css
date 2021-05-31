@@ -34,7 +34,7 @@ span {
 }
 
 h2 {
-    margin: -10px 0px 10px 23px;
+    margin: -10px 0px 5px 23px;
     font-family: 'Gotham Pro', sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
@@ -50,6 +50,7 @@ label {
     font-family: 'Gotham Pro', sans-serif;
     font-weight: 500;
     font-size: 1rem;
+    margin-bottom: 3px;
     color: #58606E;
 }
 
