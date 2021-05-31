@@ -43,4 +43,8 @@ export class ConfirmEmailComponent implements OnInit {
 
     this.router.navigate(['/terms'])
   }
+
+  resetCode() {
+    this.confirmCode.reset();
+  }
 }

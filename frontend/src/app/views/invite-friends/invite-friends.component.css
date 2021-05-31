@@ -53,6 +53,10 @@ label {
     margin-bottom: 5px;
 }
 
+.ng-invalid.ng-dirty:not(form) {
+    border: 1px solid red;
+} 
+
 .buttons {
     display: flex;
     flex-direction: row;
@@ -63,7 +67,7 @@ label {
     height: 36px;
     border: 1px solid #C8D1E0;
     border-radius: 4px;
-    margin: 7px 30px 0 auto;
+    margin: 7px 35px 0 auto;
 
     font-family: 'Gotham Pro', sans-serif;
     font-weight: 400;
@@ -75,12 +79,22 @@ label {
     cursor: pointer;
 }
 
+.send:hover {
+    transition: .2s;
+    background-color: rgb(4, 4, 165);
+}
+
+.send:disabled {
+    opacity: 30%;
+    cursor: no-drop;
+}
+
 .skip {
     width: 59px;
     height: 36px;
     border: 1px solid #C8D1E0;
     border-radius: 4px;
-    margin: 7px -100px 0 auto;
+    margin: 7px 0px 0px 0px;
 
     font-family: 'Gotham Pro', sans-serif;
     font-weight: 400;
@@ -92,12 +106,17 @@ label {
     cursor: pointer;
 }
 
+.skip:hover {
+    transition: .2s;
+    opacity: 70%;
+}
+
 .add {
     width: 36px;
     height: 36px;
     border: 1px solid #C8D1E0;
     border-radius: 4px;
-    margin: 7px -100px 0 auto;
+    margin: 7px 10px 0px 85px;
 
     font-family: 'Gotham Pro', sans-serif;
     font-weight: 400;
@@ -112,3 +131,9 @@ label {
 img {
     display: flex;
 }
+
+.add:hover {
+    transition: .2s;
+    opacity: 70%;
+}
+

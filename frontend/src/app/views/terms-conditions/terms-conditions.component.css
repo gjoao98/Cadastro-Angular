@@ -110,6 +110,11 @@ h2 {
     cursor: pointer;
 }
 
+.submit:hover {
+    transition: .2s;
+    background-color: rgb(4, 4, 165);
+}
+
 .decline {
     width: 85px;
     height: 35px;
@@ -125,4 +130,9 @@ h2 {
     color: #B20909;
 
     cursor: pointer;
+}
+
+.decline:hover {
+    transition: .2s;
+    opacity: 70%;
 }

@@ -126,3 +126,8 @@ input {
 
     cursor: pointer;
 }
+
+.resend:hover {
+    transition: .2s;
+    opacity: 70%;
+}

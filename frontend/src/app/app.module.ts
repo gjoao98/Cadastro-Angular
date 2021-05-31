@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CreateAccountModule } from './views/create-account/create-account.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar'
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    CreateAccountModule
+    CreateAccountModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

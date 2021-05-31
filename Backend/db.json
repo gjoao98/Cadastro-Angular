@@ -5,12 +5,12 @@
       "name": "string",
       "email": "string",
       "password": "string"
-    },
+    }
+  ],
+  "invite": [
     {
-      "name": "Gabriel",
-      "email": "gjoao985@gmail.com",
-      "password": "12345678",
-      "id": 2
+      "id": 1,
+      "email": "string"
     }
   ]
 }

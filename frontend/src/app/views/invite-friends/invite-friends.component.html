@@ -3,26 +3,36 @@
         01 > 02 > 03 > <span>04</span>
     </p>
     <h2>Invite your friends</h2>
-    <form class="formulario">
-        <label for="Name">Email</label>
-        <input type="text">
+    <form class="formulario" [formGroup]="inviteFriends" (submit)="onSubmit($event)">
+        <label for="Email">Email</label>
+        <input formControlName="email" name="email">
+        <div *ngIf="inviteFriends.get('email')!.hasError('email')">
+
+        </div>
 
         <label for="Email">Email</label>
-        <input type="text">
+        <input formControlName="email" name="email">
+        <div *ngIf="inviteFriends.get('email')!.hasError('email')">
 
-        <label for="Password">Email</label>
-        <input type="text">
+        </div>
+
+        <label for="Email">Email</label>
+        <input formControlName="email" name="email">
+        <div *ngIf="inviteFriends.get('email')!.hasError('email')">
+
+        </div>
+
 
         <div class="buttons">
-            <button class="add">
+            <button type="button" class="add">
                 <img src="assets/icons/addEmail.svg" alt="addEmail">
             </button>
 
-            <button class="skip" routerLink="">
+            <button type="button" class="skip" routerLink="">
                 Skip
             </button>
 
-            <button class="send" type="submit">
+            <button class="send" type="submit" [disabled]="!inviteFriends.valid">
                 Send invites
             </button>
         </div>
