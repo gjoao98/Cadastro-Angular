@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Invite } from './invite.model';
 
 @Injectable({
@@ -8,13 +9,11 @@ import { Invite } from './invite.model';
 })
 export class InviteService {
 
-  baseUrl = "http://localhost:3001/invite"
-
   constructor(
     private http: HttpClient
   ) { }
 
   inviteFriends(invite: Invite): Observable<Invite> {
-    return this.http.post<Invite>(this.baseUrl, invite);
+    return this.http.post<Invite>(environment.apiInvite, invite);
   }
 }
