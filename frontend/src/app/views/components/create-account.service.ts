@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-//import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Account } from './create-account.model';
 
 @Injectable({
@@ -9,15 +9,12 @@ import { Account } from './create-account.model';
 })
 export class CreateAccountService {
 
-  baseUrl = "http://localhost:3001/accounts"
-
   constructor(
     private http: HttpClient,
-    //private snackBar: MatSnackBar
   ) { }
 
   create(account: Account): Observable<Account> {
-    return this.http.post<Account>(this.baseUrl, account);
+    return this.http.post<Account>(environment.apiAccounts, account);
   }
 
   /*
